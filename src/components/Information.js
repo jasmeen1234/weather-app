@@ -1,22 +1,21 @@
 import React from 'react';
-import { Box, Typography, styled } from '@mui/material';
+import { Box, Typography, styled, useTheme } from '@mui/material';
 import { LocationOn, SettingsBrightness, Opacity, Brightness5, Brightness6, Dehaze, Cloud, AccessTime, CalendarToday, Air, Description } from '@mui/icons-material';
 
-
-const Row = styled(Typography)({
+const Row = styled(Typography)(({ theme }) => ({
     padding: 10,
     fontSize: 20,
     letterSpacing: 2,
     display: 'flex',
     alignItems: 'center',
+    color: theme.palette.text.primary,
     '& > svg': {
         marginRight: 10,
     },
-});
+}));
 
-const Error = styled(Typography)({
-    color: 'black',
-    
+const Error = styled(Typography)(({ theme }) => ({
+    color: theme.palette.text.primary,
     width: '100%',
     height: '100%',
     backgroundSize: 'cover',
@@ -26,9 +25,12 @@ const Error = styled(Typography)({
     fontSize: 24,
     borderRadius: '20px',
     padding: '20px',
-});
+    backgroundColor: theme.palette.background.default,
+}));
 
 const Information = ({ result }) => {
+    const theme = useTheme();
+
     const getCurrentDateTime = () => {
         const now = new Date();
         const date = now.toLocaleDateString();
@@ -40,7 +42,7 @@ const Information = ({ result }) => {
 
     return (
         result && Object.keys(result).length > 0 ? (
-            <Box style={{ margin: '10px 5px', fontSize: '2px',color:'black' }}>
+            <Box style={{ margin: '10px 5px', padding: '20px', borderRadius: '10px', backgroundColor: theme.palette.background.paper }}>
                 <Row><LocationOn />Location: {result.name}, {result.sys.country}</Row>
                 <Row><SettingsBrightness />Temperature: {result.main.temp}°C</Row>
                 <Row><Opacity />Humidity: {result.main.humidity}%</Row>
