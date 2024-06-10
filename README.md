@@ -1,4 +1,5 @@
-# weather-app![Screenshot (22)](https://github.com/jasmeen1234/weather-app/assets/107848048/a3bc18f7-4312-4274-aa0a-ca501263dfd6)
+# weather-app![Uploading Screenshot (23).png…]()
+
 1. Project Title
 Weather App
 
@@ -14,8 +15,7 @@ Optional but useful for navigation.
 Table of Contents:
 
 Description
-Features![Screenshot (22)](https://github.com/jasmeen1234/weather-app/assets/107848048/43a9a922-6566-4829-a3eb-86364e18bbd5)
-![Uploading Screenshot (22).png…]()
+Features!
 
 Demo
 Installation
