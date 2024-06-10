@@ -4,7 +4,6 @@ import ThemeToggleProvider from './ThemeContext';
 import { Box, IconButton } from '@mui/material';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import { useThemeToggle } from './ThemeContext';
-
 const ThemeToggleButton = () => {
   const { mode, toggleTheme } = useThemeToggle();
 
@@ -21,7 +20,7 @@ function App() {
   return (
     <ThemeToggleProvider>
       <ThemeToggleButton />
-      <Home />
+      <Home/>
     </ThemeToggleProvider>
   );
 }

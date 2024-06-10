@@ -7,44 +7,36 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Component = styled(Box)(({ theme }) => ({
-    height: '900px',
+    height: '100vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '80%',
+    width: '100%',
     margin: '0 auto',
+    backgroundImage: `url(${Sunset})`,
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
-        width: '100%',
     },
     [theme.breakpoints.up('md')]: {
         flexDirection: 'row',
     },
 }));
 
-const Image = styled(Box)(({ theme }) => ({
-    backgroundImage: `url(${Sunset})`,
-    backgroundSize: 'cover',
-    borderRadius: '20px 0 0 20px',
+const Content = styled(Box)(({ theme }) => ({
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Semi-transparent background for readability
+    borderRadius: '20px',
+    padding: '20px',
     [theme.breakpoints.down('sm')]: {
-        width: '50%',
-        height: '80%',
-        borderRadius: '20px 20px 0 0',
+        width: '70%',
+        margin: '10px 0',
     },
     [theme.breakpoints.up('md')]: {
         width: '30%',
-        height: '80%',
-    },
-}));
-
-const Content = styled(Box)(({ theme }) => ({
-    [theme.breakpoints.down('sm')]: {
-        width: '20%',
-        height: '80%',
-    },
-    [theme.breakpoints.up('md')]: {
-        width: '20%',
-        height: '80%',
+        margin: '20px',
     },
 }));
 
@@ -57,7 +49,6 @@ const Home = () => {
 
     return (
         <Component>
-            <Image />
             <Content>
                 <Form setResult={setResult} />
                 <Information result={result} />
