@@ -1,10 +1,11 @@
-# weather-app![Uploading Screenshot (23).png…]()
+# weather-app![Screenshot (23)](https://github.com/jasmeen1234/weather-app/assets/107848048/55c78ba7-95b1-4c08-b102-bdd0c2ae294e)
 
 1. Project Title
 Weather App
 
 2. Description
-Provide a brief description of the app, its features, and what it does.
+Provide a brief description of the app, its features, and what it does.![Uploading Screenshot (23).png…]()
+
 
 Description:
 A responsive weather application that provides real-time weather information based on the user's input location. The app features a light/dark theme toggle and displays various weather parameters like temperature, humidity, wind speed, sunrise and sunset times, and more.
