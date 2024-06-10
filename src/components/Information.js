@@ -17,7 +17,7 @@ const Row = styled(Typography)(({ theme }) => ({
 const Error = styled(Typography)(({ theme }) => ({
     color: theme.palette.text.primary,
     width: '100%',
-    height: '100%',
+    height: '80%',
     backgroundSize: 'cover',
     display: 'flex',
     justifyContent: 'center',
