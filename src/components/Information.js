@@ -36,7 +36,7 @@ const Information = ({ result }) => {
 
     return (
         result && Object.keys(result).length > 0 ?
-        <Box style={{ margin: '15px 5px' }}>
+        <Box style={{ margin: '10px 5px' }}>
             <Row><LocationOn />Location: {result.name}, {result.sys.country}</Row>
             <Row><SettingsBrightness />Temperature: {result.main.temp}°C</Row>
             <Row><Opacity />Humidity: {result.main.humidity}%</Row>
